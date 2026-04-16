@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Animaciones CSS - Animation</title>
+    <style>
+        h1{
+            font-family: "century gothic";
+            color: rgba(165, 42, 42, 0);
+            text-align: center;
+
+            animation-name: titulo;/*nombre de la animacion*/
+            animation-duration: 1s;/*duracion de la animacion*/
+            animation-iteration-count: 3;/*cantidad de veces que se repetira la animacion*/
+            animation-fill-mode: forwards;/*permite mantener el estado final de la animacion*/
+            
+        }
+
+        @keyframes titulo {
+            from {color: rgba(165, 42, 42, 0);}
+            to {color: rgba(165, 42, 42,1);}
+        }
+        p{
+            text-align: center;
+            font-family: "century gothic";
+            text-decoration: bold;
+
+            animation-name: texto;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;/*permite mantener el estado inicial de la animacion*/;
+            animation-delay: 3s;/*tiempo de retraso antes de que comience la animacion*/
+        }
+        @keyframes texto {
+            from {color: rgba(0, 0, 0, 0);}
+            to {color: rgba(0,0,0,1);}
+        }
+        img{
+            display: block;/*modo de mostrar el objeto*/
+            margin: auto;/*centra la imagen horizontalmente*/
+            width: 200px;
+            height: 200px;
+            opacity:0;/*opacidad inicial de la imagen*/
+
+            animation: imagen 3s 6s 1 forwards;/*nombre de la animacion, duracion, retraso, cantidad de veces que se repetira, modo de llenado*/
+        }
+        @keyframes imagen {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Promoción 2026 -CI</h1>
+    <p>IESTP Manuel Seoane Corrales</p>
+    <img src="img/logo.png">
+</body>
+
+</html>
